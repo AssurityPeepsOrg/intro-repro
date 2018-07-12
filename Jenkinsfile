@@ -30,7 +30,14 @@ v1.3''', description: 'What to deploy?')
       }
     }
   }
-  stage('Get Kernel') {
+ 
+    stage('Say Kernel') {
+      steps {
+        echo "${KERNEL_VERSION}"
+      }
+      
+    }
+   stage('Get Kernel') {
       steps {
         script {
           try {
@@ -40,11 +47,6 @@ v1.3''', description: 'What to deploy?')
             throw err
           }
         }
-      }
-    }
-    stage('Say Kernel') {
-      steps {
-        echo "${KERNEL_VERSION}"
       }
     }
   environment {
