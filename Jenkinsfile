@@ -1,13 +1,9 @@
 pipeline {
-  agent any
+  agent {
+    label 'jdk8'
+  }
   stages {
     stage('Say hello') {
-      agent {
-        node {
-          label 'jdk9'
-        }
-
-      }
       steps {
         echo 'hello world'
         sh 'java -version'
