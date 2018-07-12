@@ -29,12 +29,7 @@ v1.3''', description: 'What to deploy?')
         echo "Deploying ${APP_VERSION}."
       }
   }
- stage('Say Kernel') {
-      steps {
-        echo "${KERNEL_VERSION}"
-      }      
-    }
-   stage('Get Kernel') {
+stage('Get Kernel') {
       steps {
         script {
           try {
@@ -44,6 +39,11 @@ v1.3''', description: 'What to deploy?')
             throw err
           }
         }
+      }
+    }
+    stage('Say Kernel') {
+      steps {
+        echo "${KERNEL_VERSION}"
       }
     }
   }
