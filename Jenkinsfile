@@ -27,6 +27,7 @@ stage('Deploy') {
         echo "Deploying ${APP_VERSION}."
       }
     }
+  }
   environment {
     MY_NAME = 'Karin'
     TEST_USER = credentials('test-user')
@@ -34,4 +35,4 @@ stage('Deploy') {
   parameters {
     string(name: 'Name', defaultValue: 'whoever you are', description: 'Who should I say hi to?')
   }
-  
+  }  
