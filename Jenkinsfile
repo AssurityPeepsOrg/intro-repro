@@ -28,8 +28,8 @@ v1.3''', description: 'What to deploy?')
       steps {
         echo "Deploying ${APP_VERSION}."
       }
-  }
-stage('Get Kernel') {
+    }
+    stage('Get Kernel') {
       steps {
         script {
           try {
@@ -39,6 +39,7 @@ stage('Get Kernel') {
             throw err
           }
         }
+
       }
     }
     stage('Say Kernel') {
