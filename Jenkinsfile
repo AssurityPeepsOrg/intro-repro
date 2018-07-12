@@ -28,14 +28,11 @@ v1.3''', description: 'What to deploy?')
       steps {
         echo "Deploying ${APP_VERSION}."
       }
-    }
   }
- 
-    stage('Say Kernel') {
+ stage('Say Kernel') {
       steps {
         echo "${KERNEL_VERSION}"
-      }
-      
+      }      
     }
    stage('Get Kernel') {
       steps {
