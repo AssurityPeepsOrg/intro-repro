@@ -16,11 +16,10 @@ pipeline {
           }
         }
         stage('Checkpoint') {
-         agent none
-         steps {
+          steps {
             checkpoint 'Checkpoint'
-         }
-      }
+          }
+        }
         stage('Java 9') {
           agent {
             label 'jdk9'
