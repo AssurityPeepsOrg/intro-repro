@@ -8,6 +8,7 @@ pipeline {
         echo 'hello world'
         echo "${TEST_USER_USR}"
         echo "${TEST_USER_PSW}"
+        echo "Hello ${params.Name}!"
         sh 'java -version'
       }
     }
@@ -15,5 +16,8 @@ pipeline {
   environment {
     MY_NAME = 'Karin'
     TEST_USER = credentials('test-user')
+  }
+  parameters {
+    string(name: 'Name', defaultValue: 'whoever you are', description: 'Who should I say hi to?')
   }
 }
