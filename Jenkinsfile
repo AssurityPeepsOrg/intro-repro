@@ -22,7 +22,6 @@ pipeline {
             }
           }
         }
-      }
         stage('Checkpoint') {
           steps {
             checkpoint 'Checkpoint'
