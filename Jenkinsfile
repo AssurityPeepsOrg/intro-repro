@@ -46,6 +46,7 @@ v1.3''', description: 'What to deploy?')
         }
       }
     }
+  }
   environment {
     MY_NAME = 'Karin'
     TEST_USER = credentials('test-user')
