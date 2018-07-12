@@ -22,6 +22,7 @@ pipeline {
             }
           }
         }
+     }
         stage('Checkpoint') {
           steps {
             checkpoint 'Checkpoint'
@@ -36,8 +37,6 @@ pipeline {
             sleep(time: 20, unit: 'SECONDS')
           }
         }
-      }
-    }
     stage('Deploy') {
       options {
         timeout(time: 30, unit: 'SECONDS')
