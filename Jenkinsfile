@@ -15,6 +15,12 @@ pipeline {
             sleep(time: 10, unit: 'SECONDS')
           }
         }
+        stage('Checkpoint') {
+         agent none
+         steps {
+            checkpoint 'Checkpoint'
+         }
+      }
         stage('Java 9') {
           agent {
             label 'jdk9'
