@@ -12,7 +12,7 @@ pipeline {
         sh 'java -version'
       }
     }
-    stage('Deploy') {
+stage('Deploy') {
       options {
         timeout(time: 30, unit: 'SECONDS') 
       }
@@ -27,11 +27,6 @@ pipeline {
         echo "Deploying ${APP_VERSION}."
       }
     }
-      steps {
-        echo 'Continuing with deployment'
-      }
-    }
-  }
   environment {
     MY_NAME = 'Karin'
     TEST_USER = credentials('test-user')
@@ -39,4 +34,4 @@ pipeline {
   parameters {
     string(name: 'Name', defaultValue: 'whoever you are', description: 'Who should I say hi to?')
   }
-
+  }
